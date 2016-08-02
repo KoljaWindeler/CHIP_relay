@@ -16712,6 +16712,7 @@ $35</text>
 <instance part="IC1" gate="P" x="182.88" y="419.1" rot="R90"/>
 <instance part="GND8" gate="1" x="195.58" y="414.02"/>
 <instance part="U1" gate="G$1" x="20.32" y="457.2" rot="MR0"/>
+<instance part="IC1" gate="D" x="147.32" y="403.86" rot="R180"/>
 </instances>
 <busses>
 </busses>
@@ -16748,6 +16749,7 @@ $35</text>
 <wire x1="58.42" y1="360.68" x2="58.42" y2="368.3" width="0.1524" layer="91"/>
 <wire x1="58.42" y1="368.3" x2="66.04" y2="368.3" width="0.1524" layer="91"/>
 <junction x="66.04" y="368.3"/>
+<junction x="53.34" y="360.68"/>
 </segment>
 <segment>
 <pinref part="U$7" gate="G$1" pin="S"/>
@@ -16825,6 +16827,7 @@ $35</text>
 <wire x1="2.54" y1="462.28" x2="2.54" y2="459.74" width="0.1524" layer="91"/>
 <junction x="2.54" y="459.74"/>
 <pinref part="JP1" gate="G$1" pin="2"/>
+<pinref part="U1" gate="G$1" pin="IO"/>
 </segment>
 </net>
 <net name="VCC" class="0">
@@ -17161,6 +17164,7 @@ $35</text>
 <wire x1="78.74" y1="452.12" x2="71.12" y2="452.12" width="0.1524" layer="91"/>
 <wire x1="71.12" y1="452.12" x2="60.96" y2="452.12" width="0.1524" layer="91"/>
 <label x="63.5" y="452.12" size="1.778" layer="95"/>
+<junction x="71.12" y="452.12"/>
 </segment>
 </net>
 <net name="N$1" class="0">
@@ -17206,9 +17210,14 @@ $35</text>
 </segment>
 <segment>
 <pinref part="IC1" gate="P" pin="VCC"/>
-<wire x1="175.26" y1="419.1" x2="157.48" y2="419.1" width="0.1524" layer="91"/>
+<wire x1="175.26" y1="419.1" x2="167.64" y2="419.1" width="0.1524" layer="91"/>
 <label x="160.02" y="419.1" size="1.778" layer="95"/>
 <pinref part="IC1" gate="F" pin="I"/>
+<pinref part="IC1" gate="D" pin="I"/>
+<wire x1="167.64" y1="419.1" x2="157.48" y2="419.1" width="0.1524" layer="91"/>
+<wire x1="157.48" y1="403.86" x2="167.64" y2="403.86" width="0.1524" layer="91"/>
+<wire x1="167.64" y1="403.86" x2="167.64" y2="419.1" width="0.1524" layer="91"/>
+<junction x="167.64" y="419.1"/>
 </segment>
 </net>
 <net name="SDA" class="0">
@@ -17259,6 +17268,12 @@ $35</text>
 <segment>
 <pinref part="IC1" gate="F" pin="O"/>
 <wire x1="137.16" y1="419.1" x2="129.54" y2="419.1" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$12" class="0">
+<segment>
+<pinref part="IC1" gate="D" pin="O"/>
+<wire x1="137.16" y1="403.86" x2="129.54" y2="403.86" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>

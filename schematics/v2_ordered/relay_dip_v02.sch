@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.5.0">
+<eagle version="7.6.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -9,6 +9,10 @@
 <grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
+<layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
+<layer number="3" name="Route3" color="4" fill="3" visible="no" active="no"/>
+<layer number="14" name="Route14" color="1" fill="6" visible="no" active="no"/>
+<layer number="15" name="Route15" color="4" fill="6" visible="no" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
 <layer number="17" name="Pads" color="2" fill="1" visible="no" active="no"/>
 <layer number="18" name="Vias" color="2" fill="1" visible="no" active="no"/>
@@ -98,6 +102,8 @@
 <layer number="153" name="FabDoc1" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="154" name="FabDoc2" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="155" name="FabDoc3" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="156" name="tAssmbl" color="7" fill="1" visible="no" active="yes"/>
+<layer number="157" name="bAssmbl" color="7" fill="1" visible="no" active="yes"/>
 <layer number="199" name="Contour" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="200" name="200bmp" color="1" fill="10" visible="yes" active="yes"/>
 <layer number="201" name="201bmp" color="2" fill="10" visible="yes" active="yes"/>
@@ -131,6 +137,8 @@
 <layer number="229" name="229bmp" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="230" name="230bmp" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="231" name="231bmp" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="232" name="Eagle3D_PG2" color="7" fill="1" visible="no" active="yes"/>
+<layer number="233" name="Eagle3D_PG3" color="7" fill="1" visible="no" active="yes"/>
 <layer number="248" name="Housing" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="249" name="Edge" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="250" name="Descript" color="3" fill="1" visible="no" active="no"/>
@@ -14162,91 +14170,6 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 </deviceset>
 </devicesets>
 </library>
-<library name="1wire">
-<description>&lt;h1&gt;Dallas/Maxim 1-Wire/iButton devices&lt;/h1&gt;
-&lt;p&gt;Onewire is a simple, low-cost bus system working with hundreds of devices on an up to 300m long one-wire (plus GND) bus system. It is relative slow (~16kBaud) but electrically undemanding, too. The onewire is hotplug-capable, if the host software supports it. The bus can be controlled by a single &amp;mu;C port pin or by special host adapter chips, which are available for RS232, Parallel, I&lt;sup&gt;2&lt;/sup&gt;C, and USB to onewire conversion. They are available as ready-to-run host adapter devices, too.&lt;/p&gt;
-&lt;p&gt;The chips on the bus can be powered through the bus line, this is called "parasite power". All neccesary circuit and capacities for parasite power are on chip. Some chips need an additional power source to provide all features.&lt;/p&gt;
-&lt;p&gt;iButton is an application for onewire devices, using special packaged onewire devices as keys or for data storage. All onewire chips have a unique serial number for technical reasons, and together with the hot-plug capability this makes them useable as unique keys. In addition, many onewire chips have additional memory (EPROM, EEPROM, RAM) on the chip, which can be used to store cryptographic keys. iButtons come in various packages which are protected against corrosive agents and weather influences.&lt;/p&gt;
-&lt;p&gt;Get more info at &lt;tt&gt;http://www.maxim-ic.com/1-Wire.cfm&lt;/tt&gt;&lt;/p&gt;
-&lt;p&gt;Linux driver at &lt;tt&gt;http://owfs.sf.net&lt;/tt&gt;&lt;/p&gt;
-&lt;h3&gt;Copyright notice:&lt;/h3&gt;
-&lt;p&gt;The devices in this library are copyrighted by various authors &amp;mdash; permission to use, distribute and modify this library is given to you at the terms of the LGPL. Copyright holders are&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Jan Kandziora &amp;lt;jjj@gmx.de&amp;gt;&lt;/li&gt;
-&lt;li&gt;Giovanni Varasano &amp;lt;giovanni.varasano@fastwebnet.it&amp;gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;The authorship for each device is given in the device notes.&lt;/p&gt;</description>
-<packages>
-<package name="TSOC6">
-<description>&lt;b&gt;TSOC 6&lt;/b&gt;</description>
-<wire x1="-1.8542" y1="1.8034" x2="1.8542" y2="1.8034" width="0.254" layer="21"/>
-<wire x1="1.8542" y1="1.8034" x2="1.8542" y2="-1.8034" width="0.254" layer="21"/>
-<wire x1="1.8542" y1="-1.8034" x2="-1.8542" y2="-1.8034" width="0.254" layer="21"/>
-<wire x1="-1.8542" y1="-1.8034" x2="-1.8542" y2="1.8034" width="0.254" layer="21"/>
-<circle x="-1.143" y="-1.016" radius="0.254" width="0.1524" layer="21"/>
-<smd name="1" x="-1.27" y="-1.6002" dx="0.4064" dy="1.2192" layer="1"/>
-<smd name="2" x="0" y="-1.6002" dx="0.4064" dy="1.2192" layer="1"/>
-<smd name="3" x="1.27" y="-1.6002" dx="0.4064" dy="1.2192" layer="1"/>
-<smd name="4" x="1.27" y="1.6002" dx="0.4064" dy="1.2192" layer="1"/>
-<smd name="5" x="0" y="1.6002" dx="0.4064" dy="1.2192" layer="1"/>
-<smd name="6" x="-1.27" y="1.6002" dx="0.4064" dy="1.2192" layer="1"/>
-<text x="-2.54" y="2.54" size="1.27" layer="25">&gt;NAME</text>
-<text x="-2.54" y="-3.81" size="1.27" layer="27">&gt;VALUE</text>
-<rectangle x1="-1.3716" y1="-2.0828" x2="-1.1684" y2="-1.0668" layer="51"/>
-<rectangle x1="-0.1016" y1="-2.0828" x2="0.1016" y2="-1.0668" layer="51"/>
-<rectangle x1="1.1684" y1="-2.0828" x2="1.3716" y2="-1.0668" layer="51"/>
-<rectangle x1="1.1684" y1="1.0668" x2="1.3716" y2="2.0828" layer="51"/>
-<rectangle x1="-0.1016" y1="1.0668" x2="0.1016" y2="2.0828" layer="51"/>
-<rectangle x1="-1.3716" y1="1.0668" x2="-1.1684" y2="2.0828" layer="51"/>
-</package>
-</packages>
-<symbols>
-<symbol name="IC">
-<wire x1="-5.08" y1="2.54" x2="5.08" y2="2.54" width="0.254" layer="94"/>
-<wire x1="5.08" y1="2.54" x2="5.08" y2="-2.54" width="0.254" layer="94"/>
-<wire x1="5.08" y1="-2.54" x2="-5.08" y2="-2.54" width="0.254" layer="94"/>
-<wire x1="-5.08" y1="-2.54" x2="-5.08" y2="2.54" width="0.254" layer="94"/>
-<text x="5.715" y="0.635" size="1.778" layer="95">&gt;NAME</text>
-<text x="5.715" y="-1.905" size="1.778" layer="96">&gt;VALUE</text>
-<text x="-2.54" y="-1.905" size="3.81" layer="94" ratio="15">IC</text>
-</symbol>
-<symbol name="1W">
-<text x="-8.89" y="1.905" size="1.778" layer="95" font="vector">&gt;NAME</text>
-<pin name="1W" x="-5.08" y="0" visible="pad" length="middle" direction="pwr"/>
-</symbol>
-<symbol name="GND">
-<text x="-0.635" y="-0.635" size="1.778" layer="95" font="vector">&gt;NAME</text>
-<text x="1.905" y="-2.54" size="1.27" layer="95" font="vector" rot="MR270">GND</text>
-<pin name="GND" x="0" y="-7.62" visible="pad" length="middle" direction="pwr" rot="R90"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="DS2432" prefix="IC">
-<description>&lt;h2&gt;1024-Bit Protected EEPROM with SHA-1 Engine&lt;/h2&gt;
-&lt;p&gt;This chip is a cryptographic device, providing 1024 Bits of EEPROM memory which may be written only after supplying the correct 64 bit secret. the secret cannot be read back from the device.&lt;/p&gt;
-&lt;p&gt;The other features of this chip are like the DS2431.&lt;/p&gt;
-&lt;p&gt;Please note the SHA-1 hash algorithm is considered weak if the data is not properly "padded". If you don't understand anything of this, don't use this chip.&lt;/p&gt;
-&lt;h3&gt;Author:&lt;/h3&gt;
-Jan Kandziora &amp;lt;jjj@gmx.de&amp;gt;</description>
-<gates>
-<gate name="G$1" symbol="IC" x="0" y="0" addlevel="always"/>
-<gate name="_1W" symbol="1W" x="-5.08" y="0" addlevel="request"/>
-<gate name="P" symbol="GND" x="0" y="0" addlevel="request"/>
-</gates>
-<devices>
-<device name="P" package="TSOC6">
-<connects>
-<connect gate="P" pin="GND" pad="4"/>
-<connect gate="_1W" pin="1W" pad="3"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 <library name="logo">
 <packages>
 <package name="LOGO_3X3_COPPER">
@@ -16504,6 +16427,84 @@ Based on the following sources:
 </deviceset>
 </devicesets>
 </library>
+<library name="JKW_CHIP">
+<packages>
+<package name="TSOC6">
+<description>&lt;b&gt;TSOC 6&lt;/b&gt;</description>
+<circle x="-2.413" y="-2.286" radius="0.254" width="0.1524" layer="21"/>
+<wire x1="1.8542" y1="1.8034" x2="1.8542" y2="-1.8034" width="0.254" layer="21"/>
+<wire x1="-1.8542" y1="-1.8034" x2="-1.8542" y2="1.8034" width="0.254" layer="21"/>
+<rectangle x1="-1.3716" y1="-2.0828" x2="-1.1684" y2="-1.0668" layer="51"/>
+<rectangle x1="-0.1016" y1="-2.0828" x2="0.1016" y2="-1.0668" layer="51"/>
+<rectangle x1="1.1684" y1="-2.0828" x2="1.3716" y2="-1.0668" layer="51"/>
+<rectangle x1="1.1684" y1="1.0668" x2="1.3716" y2="2.0828" layer="51"/>
+<rectangle x1="-0.1016" y1="1.0668" x2="0.1016" y2="2.0828" layer="51"/>
+<rectangle x1="-1.3716" y1="1.0668" x2="-1.1684" y2="2.0828" layer="51"/>
+<smd name="1" x="-1.27" y="-1.6002" dx="0.53" dy="1.33" layer="1"/>
+<smd name="2" x="0" y="-1.6002" dx="0.53" dy="1.33" layer="1"/>
+<smd name="3" x="1.27" y="-1.6002" dx="0.53" dy="1.33" layer="1"/>
+<smd name="4" x="1.27" y="1.6002" dx="0.53" dy="1.33" layer="1"/>
+<smd name="5" x="0" y="1.6002" dx="0.53" dy="1.33" layer="1"/>
+<smd name="6" x="-1.27" y="1.6002" dx="0.53" dy="1.33" layer="1"/>
+<text x="-2.54" y="2.54" size="1.27" layer="25" font="vector">&gt;NAME</text>
+<text x="-2.54" y="-3.81" size="1.27" layer="27" font="vector">&gt;VALUE</text>
+</package>
+</packages>
+<symbols>
+<symbol name="DS2431">
+<wire x1="5.08" y1="7.62" x2="5.08" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="5.08" y1="-7.62" x2="-7.62" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="-7.62" x2="-7.62" y2="7.62" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="7.62" x2="5.08" y2="7.62" width="0.254" layer="94"/>
+<pin name="GND" x="-2.54" y="-12.7" length="middle" rot="R90"/>
+<pin name="IO" x="10.16" y="2.54" length="middle" rot="R180"/>
+<pin name="NC@1" x="-5.08" y="7.62" length="point" rot="R90"/>
+<pin name="NC@2" x="-2.54" y="7.62" length="point" rot="R90"/>
+<pin name="NC@3" x="0" y="7.62" length="point" rot="R90"/>
+<pin name="NC@4" x="2.54" y="7.62" length="point" rot="R90"/>
+<text x="2.54" y="-12.7" size="1.778" layer="95">&gt;NAME</text>
+<text x="2.54" y="-15.24" size="1.778" layer="96">&gt;VALUE</text>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="DS2431" prefix="U">
+<description>&lt;h2&gt;1024-Bit EEPROM&lt;/h2&gt;
+&lt;p&gt;This chip provides a 4x256 Bit EEPROM, which can be programmed@5V. Write protection and OTP emulation are available, too.&lt;/p&gt;
+&lt;h3&gt;Author:&lt;/h3&gt;
+Jan Kandziora &amp;lt;jjj@gmx.de&amp;gt;</description>
+<gates>
+<gate name="G$1" symbol="DS2431" x="2.54" y="0"/>
+</gates>
+<devices>
+<device name="P" package="TSOC6">
+<connects>
+<connect gate="G$1" pin="GND" pad="1"/>
+<connect gate="G$1" pin="IO" pad="2"/>
+<connect gate="G$1" pin="NC@1" pad="3"/>
+<connect gate="G$1" pin="NC@2" pad="4"/>
+<connect gate="G$1" pin="NC@3" pad="5"/>
+<connect gate="G$1" pin="NC@4" pad="6"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="ASSEMBLE" value="" constant="no"/>
+<attribute name="DESCRIPTION" value="IC, 1024-Bit, 1-Wire EEPROM, TSOC6" constant="no"/>
+<attribute name="FOOTPRINT" value="TSOC6" constant="no"/>
+<attribute name="LINK" value="http://www.digikey.com/product-detail/en/DS2431P%2BT%26R/DS2431P%2BT%26RCT-ND/3647900" constant="no"/>
+<attribute name="MFG" value="DIGIKEY" constant="no"/>
+<attribute name="MFG_PN" value="DS2431P+T&amp;RCT-ND" constant="no"/>
+<attribute name="PART_TYPE" value="IC" constant="no"/>
+<attribute name="PRICE" value="0.98" constant="no"/>
+<attribute name="TOLLERANCE" value="" constant="no"/>
+<attribute name="VENDOR" value="MAXIM" constant="no"/>
+<attribute name="VENDOR_PART_NUMBER" value="DS2431P+T&amp;R" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -16516,70 +16517,70 @@ Based on the following sources:
 <parts>
 <part name="PHASE_IN" library="wirepad" deviceset="WIREPAD" device="3,17/1,3"/>
 <part name="COM_IN" library="wirepad" deviceset="WIREPAD" device="3,17/1,3"/>
-<part name="POW" library="led" deviceset="LED" device="CHIP-LED0805"/>
-<part name="R7" library="rcl" deviceset="R-EU_" device="R0805" value="330R"/>
-<part name="U$1" library="SRD-05VDC-SL-C" deviceset="RELAY" device="PTH"/>
-<part name="U$3" library="transistor-power" deviceset="NMOSFET_SMD_223" device=""/>
+<part name="POW" library="led" deviceset="LED" device="CHIP-LED0805" value="150080BS75000"/>
+<part name="R7" library="rcl" deviceset="R-EU_" device="R0805" value="120R"/>
+<part name="U$1" library="SRD-05VDC-SL-C" deviceset="RELAY" device="PTH" value="SRD-05VDC-SL-C"/>
+<part name="U$3" library="transistor-power" deviceset="NMOSFET_SMD_223" device="" value="DMN6068SE-13"/>
 <part name="GND4" library="supply1" deviceset="GND" device=""/>
 <part name="P+1" library="supply1" deviceset="VCC" device=""/>
 <part name="COM_OUT" library="wirepad" deviceset="WIREPAD" device="3,17/1,3"/>
 <part name="N4" library="wirepad" deviceset="WIREPAD" device="3,17/1,3"/>
-<part name="IC2" library="1wire" deviceset="DS2432" device="P"/>
 <part name="GND14" library="supply1" deviceset="GND" device=""/>
-<part name="R1" library="rcl" deviceset="R-EU_" device="R0805"/>
+<part name="R1" library="rcl" deviceset="R-EU_" device="R0805" value="2.2k"/>
 <part name="P+3" library="supply1" deviceset="VCC" device=""/>
-<part name="D2" library="diode" deviceset="DIODE-" device="SMB"/>
+<part name="D2" library="diode" deviceset="DIODE-" device="SMB" value="ES2D"/>
 <part name="U$4" library="logo" deviceset="LOGO_3X3_COPPER" device=""/>
 <part name="U$6" library="logo" deviceset="LOGO_3X3_COPPER" device=""/>
-<part name="P4" library="led" deviceset="LED" device="CHIP-LED0805"/>
-<part name="R2" library="rcl" deviceset="R-EU_" device="R0805" value="330R"/>
-<part name="P1" library="led" deviceset="LED" device="CHIP-LED0805"/>
-<part name="R3" library="rcl" deviceset="R-EU_" device="R0805" value="330R"/>
+<part name="P4" library="led" deviceset="LED" device="CHIP-LED0805" value="696-SML-0805ICTR"/>
+<part name="R2" library="rcl" deviceset="R-EU_" device="R0805" value="200R"/>
+<part name="P1" library="led" deviceset="LED" device="CHIP-LED0805" value="696-SML-0805ICTR"/>
+<part name="R3" library="rcl" deviceset="R-EU_" device="R0805" value="200R"/>
 <part name="U$5" library="logo" deviceset="LOGO_10X10_SILK" device=""/>
 <part name="FRAME1" library="frames" deviceset="DINA3_L" device=""/>
-<part name="R8" library="rcl" deviceset="R-EU_" device="R0805" value="10k"/>
+<part name="R8" library="rcl" deviceset="R-EU_" device="R0805" value="n.a. (10k)"/>
 <part name="B1" library="rectifier" deviceset="DB?*G" device="LS20" technology="2"/>
 <part name="U$10" library="Kolja" deviceset="R-7805-1.0" device=""/>
 <part name="GND5" library="supply1" deviceset="GND" device=""/>
 <part name="GND2" library="supply1" deviceset="GND" device=""/>
 <part name="C4" library="rcl" deviceset="CPOL-US" device="150CLZ-0810" value="EMZR500ADA221MHA0G"/>
 <part name="C5" library="rcl" deviceset="CPOL-US" device="150CLZ-0810" value="EMZR500ADA221MHA0G"/>
-<part name="SV3" library="con-lstb" deviceset="MA03-2" device=""/>
-<part name="JP1" library="con-lstb" deviceset="MA03-1" device=""/>
-<part name="P2" library="led" deviceset="LED" device="CHIP-LED0805"/>
-<part name="R4" library="rcl" deviceset="R-EU_" device="R0805" value="330R"/>
-<part name="P3" library="led" deviceset="LED" device="CHIP-LED0805"/>
-<part name="R5" library="rcl" deviceset="R-EU_" device="R0805" value="330R"/>
-<part name="U$2" library="SRD-05VDC-SL-C" deviceset="RELAY" device="PTH"/>
-<part name="U$7" library="transistor-power" deviceset="NMOSFET_SMD_223" device=""/>
+<part name="SV3" library="con-lstb" deviceset="MA03-2" device="" value="571-4-146262-1"/>
+<part name="JP1" library="con-lstb" deviceset="MA03-1" device="" value="571-4-103321-5"/>
+<part name="P2" library="led" deviceset="LED" device="CHIP-LED0805" value="696-SML-0805ICTR"/>
+<part name="R4" library="rcl" deviceset="R-EU_" device="R0805" value="200R"/>
+<part name="P3" library="led" deviceset="LED" device="CHIP-LED0805" value="696-SML-0805ICTR"/>
+<part name="R5" library="rcl" deviceset="R-EU_" device="R0805" value="200R"/>
+<part name="U$2" library="SRD-05VDC-SL-C" deviceset="RELAY" device="PTH" value="SRD-05VDC-SL-C"/>
+<part name="U$7" library="transistor-power" deviceset="NMOSFET_SMD_223" device="" value="DMN6068SE-13"/>
 <part name="GND1" library="supply1" deviceset="GND" device=""/>
 <part name="P+2" library="supply1" deviceset="VCC" device=""/>
 <part name="N1" library="wirepad" deviceset="WIREPAD" device="3,17/1,3"/>
-<part name="D1" library="diode" deviceset="DIODE-" device="SMB"/>
-<part name="R6" library="rcl" deviceset="R-EU_" device="R0805" value="10k"/>
-<part name="U$8" library="SRD-05VDC-SL-C" deviceset="RELAY" device="PTH"/>
-<part name="U$9" library="transistor-power" deviceset="NMOSFET_SMD_223" device=""/>
+<part name="D1" library="diode" deviceset="DIODE-" device="SMB" value="ES2D"/>
+<part name="R6" library="rcl" deviceset="R-EU_" device="R0805" value="n.a. (10k)"/>
+<part name="U$8" library="SRD-05VDC-SL-C" deviceset="RELAY" device="PTH" value="SRD-05VDC-SL-C"/>
+<part name="U$9" library="transistor-power" deviceset="NMOSFET_SMD_223" device="" value="DMN6068SE-13"/>
 <part name="GND3" library="supply1" deviceset="GND" device=""/>
 <part name="P+4" library="supply1" deviceset="VCC" device=""/>
 <part name="N2" library="wirepad" deviceset="WIREPAD" device="3,17/1,3"/>
-<part name="D3" library="diode" deviceset="DIODE-" device="SMB"/>
-<part name="R9" library="rcl" deviceset="R-EU_" device="R0805" value="10k"/>
-<part name="U$11" library="SRD-05VDC-SL-C" deviceset="RELAY" device="PTH"/>
-<part name="U$12" library="transistor-power" deviceset="NMOSFET_SMD_223" device=""/>
+<part name="D3" library="diode" deviceset="DIODE-" device="SMB" value="ES2D"/>
+<part name="R9" library="rcl" deviceset="R-EU_" device="R0805" value="n.a. (10k)"/>
+<part name="U$11" library="SRD-05VDC-SL-C" deviceset="RELAY" device="PTH" value="SRD-05VDC-SL-C"/>
+<part name="U$12" library="transistor-power" deviceset="NMOSFET_SMD_223" device="" value="DMN6068SE-13"/>
 <part name="GND6" library="supply1" deviceset="GND" device=""/>
 <part name="P+5" library="supply1" deviceset="VCC" device=""/>
 <part name="N3" library="wirepad" deviceset="WIREPAD" device="3,17/1,3"/>
-<part name="D4" library="diode" deviceset="DIODE-" device="SMB"/>
-<part name="R10" library="rcl" deviceset="R-EU_" device="R0805" value="10k"/>
+<part name="D4" library="diode" deviceset="DIODE-" device="SMB" value="ES2D"/>
+<part name="R10" library="rcl" deviceset="R-EU_" device="R0805" value="n.a. (10k)"/>
 <part name="C2" library="rcl" deviceset="CPOL-US" device="150CLZ-0810" value="EMZR500ADA221MHA0G"/>
 <part name="GND7" library="supply1" deviceset="GND" device=""/>
-<part name="S1" library="SparkFun-Electromechanical" deviceset="SWITCH-MOMENTARY-2" device="SMD"/>
+<part name="S1" library="SparkFun-Electromechanical" deviceset="SWITCH-MOMENTARY-2" device="SMD" value="n.a."/>
 <part name="R11" library="rcl" deviceset="R-EU_" device="R0805" value="10k"/>
-<part name="SV4" library="con-lstb" deviceset="MA08-1" device=""/>
-<part name="JP2" library="con-lstb" deviceset="MA03-1" device=""/>
-<part name="JP3" library="con-lstb" deviceset="MA03-1" device=""/>
+<part name="SV4" library="con-lstb" deviceset="MA08-1" device="" value="649-68000-408HLF"/>
+<part name="JP2" library="con-lstb" deviceset="MA03-1" device="" value="571-4-103321-5"/>
+<part name="JP3" library="con-lstb" deviceset="MA03-1" device="" value="571-4-103321-5"/>
 <part name="IC1" library="74xx-eu" deviceset="74*04" device="D" technology="HCT"/>
 <part name="GND8" library="supply1" deviceset="GND" device=""/>
+<part name="U1" library="JKW_CHIP" deviceset="DS2431" device="P" value="DS2431P+T&amp;R"/>
 </parts>
 <sheets>
 <sheet>
@@ -16647,13 +16648,10 @@ $35</text>
 <instance part="P+1" gate="VCC" x="167.64" y="574.04" rot="MR0"/>
 <instance part="COM_OUT" gate="G$1" x="218.44" y="571.5" rot="MR0"/>
 <instance part="N4" gate="G$1" x="210.82" y="556.26" rot="MR0"/>
-<instance part="IC2" gate="G$1" x="15.24" y="462.28"/>
-<instance part="IC2" gate="P" x="22.86" y="452.12" rot="R270"/>
-<instance part="IC2" gate="_1W" x="20.32" y="454.66"/>
-<instance part="GND14" gate="1" x="12.7" y="447.04"/>
-<instance part="R1" gate="G$1" x="0" y="462.28" rot="R90"/>
-<instance part="P+3" gate="VCC" x="0" y="472.44" smashed="yes">
-<attribute name="VALUE" x="5.08" y="469.9" size="1.778" layer="96" rot="R90"/>
+<instance part="GND14" gate="1" x="22.86" y="439.42"/>
+<instance part="R1" gate="G$1" x="2.54" y="467.36" rot="R90"/>
+<instance part="P+3" gate="VCC" x="2.54" y="477.52" smashed="yes">
+<attribute name="VALUE" x="7.62" y="474.98" size="1.778" layer="96" rot="R90"/>
 </instance>
 <instance part="D2" gate="G$1" x="149.86" y="561.34" rot="MR90"/>
 <instance part="U$4" gate="G$1" x="170.18" y="330.2"/>
@@ -16673,7 +16671,7 @@ $35</text>
 <instance part="C4" gate="G$1" x="45.72" y="368.3"/>
 <instance part="C5" gate="G$1" x="53.34" y="368.3"/>
 <instance part="SV3" gate="1" x="317.5" y="520.7"/>
-<instance part="JP1" gate="G$1" x="-12.7" y="454.66"/>
+<instance part="JP1" gate="G$1" x="-12.7" y="459.74"/>
 <instance part="P2" gate="G$1" x="297.18" y="467.36"/>
 <instance part="R4" gate="G$1" x="297.18" y="449.58" rot="R270"/>
 <instance part="P3" gate="G$1" x="284.48" y="467.36"/>
@@ -16710,9 +16708,10 @@ $35</text>
 <instance part="IC1" gate="B" x="96.52" y="528.32"/>
 <instance part="IC1" gate="C" x="96.52" y="492.76"/>
 <instance part="IC1" gate="E" x="99.06" y="457.2"/>
-<instance part="IC1" gate="F" x="132.08" y="419.1"/>
+<instance part="IC1" gate="F" x="147.32" y="419.1" rot="R180"/>
 <instance part="IC1" gate="P" x="182.88" y="419.1" rot="R90"/>
 <instance part="GND8" gate="1" x="195.58" y="414.02"/>
+<instance part="U1" gate="G$1" x="20.32" y="457.2" rot="MR0"/>
 </instances>
 <busses>
 </busses>
@@ -16724,10 +16723,9 @@ $35</text>
 <wire x1="114.3" y1="551.18" x2="114.3" y2="558.8" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="IC2" gate="P" pin="GND"/>
 <pinref part="GND14" gate="1" pin="GND"/>
-<wire x1="15.24" y1="452.12" x2="12.7" y2="452.12" width="0.1524" layer="91"/>
-<wire x1="12.7" y1="452.12" x2="12.7" y2="449.58" width="0.1524" layer="91"/>
+<pinref part="U1" gate="G$1" pin="GND"/>
+<wire x1="22.86" y1="444.5" x2="22.86" y2="441.96" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="B1" gate="G$1" pin="-"/>
@@ -16820,14 +16818,14 @@ $35</text>
 </net>
 <net name="LD2" class="0">
 <segment>
-<pinref part="IC2" gate="_1W" pin="1W"/>
-<label x="5.08" y="454.66" size="1.778" layer="95"/>
-<wire x1="15.24" y1="454.66" x2="0" y2="454.66" width="0.1524" layer="91"/>
+<label x="7.62" y="459.74" size="1.778" layer="95"/>
+<wire x1="10.16" y1="459.74" x2="2.54" y2="459.74" width="0.1524" layer="91"/>
 <pinref part="R1" gate="G$1" pin="1"/>
-<wire x1="0" y1="454.66" x2="-5.08" y2="454.66" width="0.1524" layer="91"/>
-<wire x1="0" y1="457.2" x2="0" y2="454.66" width="0.1524" layer="91"/>
-<junction x="0" y="454.66"/>
+<wire x1="2.54" y1="459.74" x2="-5.08" y2="459.74" width="0.1524" layer="91"/>
+<wire x1="2.54" y1="462.28" x2="2.54" y2="459.74" width="0.1524" layer="91"/>
+<junction x="2.54" y="459.74"/>
 <pinref part="JP1" gate="G$1" pin="2"/>
+<pinref part="U1" gate="G$1" pin="IO"/>
 </segment>
 </net>
 <net name="VCC" class="0">
@@ -16844,7 +16842,7 @@ $35</text>
 <segment>
 <pinref part="R1" gate="G$1" pin="2"/>
 <pinref part="P+3" gate="VCC" pin="VCC"/>
-<wire x1="0" y1="469.9" x2="0" y2="467.36" width="0.1524" layer="91"/>
+<wire x1="2.54" y1="474.98" x2="2.54" y2="472.44" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="P1" gate="G$1" pin="A"/>
@@ -17211,6 +17209,7 @@ $35</text>
 <pinref part="IC1" gate="P" pin="VCC"/>
 <wire x1="175.26" y1="419.1" x2="157.48" y2="419.1" width="0.1524" layer="91"/>
 <label x="160.02" y="419.1" size="1.778" layer="95"/>
+<pinref part="IC1" gate="F" pin="I"/>
 </segment>
 </net>
 <net name="SDA" class="0">
@@ -17255,6 +17254,12 @@ $35</text>
 <pinref part="U$12" gate="G$1" pin="G"/>
 <pinref part="IC1" gate="E" pin="O"/>
 <wire x1="109.22" y1="457.2" x2="111.76" y2="457.2" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$6" class="0">
+<segment>
+<pinref part="IC1" gate="F" pin="O"/>
+<wire x1="137.16" y1="419.1" x2="129.54" y2="419.1" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
